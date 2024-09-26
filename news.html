@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <link rel="stylesheet" href="style.css">
+        <title>VergerMaraudeurs-Actualités</title>
+    </head>
+    <body>
+  <!-- Stickiy Navbar -->
+  <div id="navbar">
+    <img src="logo.png" id="logo">
+    <div id="navbar-right">
+      <a class="active" href="index.html">Home</a>
+      <a href="contact.html">Contact</a>
+      <a href="news.html">About</a>
+    </div>
+  </div>
+  <script>
+    // When the user scrolls down 80px from the top of the document, resize the navbar's padding and the logo's font size
+    var oldentries = document.getElementById("#navbar a")
+
+window.onscroll = function () {
+  if (document.body.scrollTop > 1 || document.documentElement.scrollTop > 1) {
+    document.getElementById("navbar").style.padding = "20px 10px";
+    document.getElementById("logo").style.height = "50px";
+    document.getElementById("logo").style.width = "50px";
+    oldentries.style.top="0px";
+  } else {
+    document.getElementById("navbar").style.padding = "30px 10px";
+    document.getElementById("logo").style.height = "100px";
+    document.getElementById("logo").style.width = "100px";
+    oldentries.style.top="30px";
+  }
+}
+  </script>
+    </body>
+</html>
